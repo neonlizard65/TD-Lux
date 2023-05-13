@@ -1,0 +1,84 @@
+* {
+    box-sizing:border-box
+}
+
+.carousel{
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    
+}
+
+.container{
+    position: relative;
+    display: none;
+}
+
+.container img{
+    width: 100vw;
+    height: 85vh;
+    object-fit: cover;
+}
+
+.back, .forward{
+    position: relative;
+    cursor: pointer;
+    color: black;
+    background-color: rgba(0,0,0,0.2);
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    padding: 10px;
+    user-select: none;
+    bottom: 50%
+}
+
+.forward{
+    float: right;
+    right: 1vw;
+    border-radius: 0 5px 5px 0;
+}
+.back{
+    left: 1vw;
+    border-radius: 5px 0 0 5px;
+
+}
+
+.back:hover, .forward:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.caption {
+    position: absolute;
+    color: #e3e3e3;
+    font-size: 2em;
+    padding: 20px 14px;
+    background-color: rgba(0,0,0,0.6);
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.dot-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    bottom: 8%;
+}
+
+.dots{
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 5px;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+    background-color: rgba(0,0,0,0.7);
+}

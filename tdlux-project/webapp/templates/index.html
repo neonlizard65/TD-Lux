@@ -1,6 +1,6 @@
+{% extends 'base.html' %}
 {% load static %}
 
-{% extends 'body.html' %}
 
 {% block styles %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
@@ -12,6 +12,63 @@
 
 {% block content %}
 
+<div class="carousel">
+
+    <div class="container">
+        <img src="{% static 'res/water1.jpg' %}" style="width:100%">
+        <div class="caption">
+            <h1>15 лет на рынке</h1>
+            <p>Предоставляем клиентам качественную воду уже более 15 лет</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <img src="{% static 'res/water2.jpg' %}" style="width:100%">
+        <div class="caption">
+            <h1>Артезианская вода</h1>
+            <p>Добывается из артезианских скважин глубиной 110 - 200 м</p>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <img src="{% static 'res/water3.jpg' %}" style="width:100%">
+        <div class="caption">
+            <h1>Оптимальная стоимость и бесплатная доставка</h1>
+            <p>При заказе от двух бутылей вы платите только за воду</p>
+        </div>
+    </div>
+
+    <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="dot-container">
+        <span class="dots" onclick="currentSlide(1)"></span>
+        <span class="dots" onclick="currentSlide(2)"></span>
+        <span class="dots" onclick="currentSlide(3)"></span>
+    </div> 
+</div>
+
+<!--Сделать цикл для товаров-->
+<div class="catalog">
+    <div class="card">
+        <img src="" alt="">
+        <div class="product-name">
+
+        </div>
+        <div class="product-price">
+
+        </div>
+        <div class="product-volume">
+
+        </div>
+        <button>Добавить</button>
+        
+    </div>
+
+</div>
+
+<script src="{% static 'script/carousel.js' %}"></script>
 {% endblock content %}
 
 

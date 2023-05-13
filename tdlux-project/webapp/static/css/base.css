@@ -1,0 +1,27 @@
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    margin: 0px;
+}
+
+.content{
+    position: relative;
+    display: flex;
+    min-height: 78vh;
+}
+
+.button, input[type="submit"]{
+    width: 200px;
+    height: 50px;
+    font-size: 1em;
+    margin: 0 auto;
+    text-align: center;
+    background: #fdd379;
+    cursor: pointer;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    border: none;
+    border-radius: 2px;
+}

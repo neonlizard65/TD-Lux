@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>Регистрация</title>
+{% endblock title %}
+
+{% block styles %}
+
+
+
+{% endblock styles %}
+
+{% block content %}
+<h1>Создать аккаунт</h1>
+<form action="/register" method="post">
+    <div class="field">
+        <label for="login">Логин:</label>
+        <input type="text" id="login" name="login">
+    </div> 
+    <div class="field">
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password">
+    </div>
+    <div class="field">
+        <label for="password">Подтвердите пароль:</label>
+        <input type="password" id="password" name="password">
+    </div>
+    <div class="button">
+        <input type="submit" id="submit" name="submit" value="Создать уч. запись">
+    </div>
+</form>
+{% endblock content %}
+

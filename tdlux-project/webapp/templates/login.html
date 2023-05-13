@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Авторизация
+{% endblock title %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}">
+{% endblock styles %}
+
+{% block content %}
+<div class="form">
+    <h1>Войти в личный кабинет</h1>
+    <form action="/authorize" method="post">
+        <div class="field">
+            <label for="login">Логин:</label>
+            <input type="text" id="login" name="login">
+        </div> 
+        <div class="field">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="remember">
+            <a href="register">Нет аккаунта? Создай новый!</a>
+        </div>
+        <div class="button">
+            <input type="submit" id="submit" name="submit" value="Войти">
+        </div>
+    </form>
+</div>
+{% endblock content %}
+
