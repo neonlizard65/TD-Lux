@@ -1,0 +1,10 @@
+footer{
+    color: white;
+    background-color: #222;
+    margin: 0px;
+}
+
+.footer-content{
+    width: 80vw;
+    margin: auto;
+}
