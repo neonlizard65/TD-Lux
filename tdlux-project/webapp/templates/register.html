@@ -15,14 +15,15 @@
     <form action="/register" method="post">
         {% csrf_token %}
         <div class="fields">
-            <!--TODO: Checking passwords etc.-->
             {% for field in userform %}
                 <div class="field">
                     {{field.label_tag}}
                     {{field}}
-                </div> 
+                </div>
+                {{field.errors}}
             {% endfor %}
         </div>
+        
         <div class="button">
             <input type="submit" id="submit" name="submit" value="Создать уч. запись">
         </div>

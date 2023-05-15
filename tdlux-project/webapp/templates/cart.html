@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock styles %}
+
+{% block title %}Корзина{% endblock title %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+    {% if cart %}
+
+    {% else %}
+    <div class="message">Корзина пуста</div>
+    {% endif %}
+
+{% else %}
+    <div class="message">Для работы с корзиной, нужно авторизоваться</div>
+{% endif %}
+
+{% endblock content %}
+

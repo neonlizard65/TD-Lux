@@ -5,15 +5,6 @@ from django.utils.translation import gettext_lazy as _
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-class User(AbstractUser):
-    class Role(models.TextChoices):
-        CLIENT = 1, 'Клиент'
-        MANAGER = 2, 'Менеджер'
-        
-    role = models.PositiveSmallIntegerField(choices = Role.choices, verbose_name="Роль", default=Role.MANAGER)
-    name = models.CharField(max_length=30, verbose_name="Наименование")
-    phone = models.CharField(max_length=15, verbose_name="Телефон")
-    adress = models.CharField(max_length=150, verbose_name="Адрес")
 
 class Product(models.Model):
     name = models.CharField(max_length=50, verbose_name="Наименование")
@@ -32,6 +23,16 @@ class Product(models.Model):
     
     def __str__(self) -> str:
         return self.name
+    
+class User(AbstractUser):
+    class Role(models.TextChoices):
+        CLIENT = 1, 'Клиент'
+        MANAGER = 2, 'Менеджер'
+        
+    role = models.PositiveSmallIntegerField(choices = Role.choices, verbose_name="Роль", default=Role.MANAGER)
+    name = models.CharField(max_length=30, verbose_name="Наименование")
+    phone = models.CharField(max_length=15, verbose_name="Телефон")
+    adress = models.CharField(max_length=150, verbose_name="Адрес")
     
 class Sklad(models.Model):
     name = models.CharField(max_length=50, verbose_name="Наименование")
@@ -66,7 +67,7 @@ class Zayavka(models.Model):
     
     def __str__(self) -> str:
         return f"{self.client.name} {self.date}"
-    
+
     
     
     

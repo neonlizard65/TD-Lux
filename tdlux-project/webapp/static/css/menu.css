@@ -73,6 +73,7 @@ nav{
     background: url("/static/res/auth.svg") no-repeat;
     background-size: cover;
     transition: 0.3s;
+    -moz-transition: 0.3s;
 }
 
 #auth:hover{
@@ -86,10 +87,26 @@ nav{
     height: 30px;
     width: 25px;
     transition: 0.3s;
+    -moz-transition: 0.3s;
 }
 
 #cart:hover{
     background: url("/static/res/cart yellow.svg") no-repeat;
+    background-size: cover;
+
+}
+
+#exit{
+    background: url("/static/res/exit.svg") no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+
+#exit:hover{
+    background: url("/static/res/exit red.svg") no-repeat;
     background-size: cover;
 
 }

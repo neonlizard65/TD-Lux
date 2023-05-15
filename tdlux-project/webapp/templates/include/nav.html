@@ -11,11 +11,17 @@
             </a>
         </div>
         <div class="panel">
+            {% if user.is_authenticated %}
+            <div class="panel-btn" id="exit">
+                <a href="logout"></a>
+            </div> 
+            {% else %}
             <div class="panel-btn" id="auth">
                 <a href="login"></a>
             </div> 
+            {% endif %}
             <div class="panel-btn" id="cart">
-                <a href=""></a>
+                <a href="cart"></a>
             </div>
         </div>
     </div>
