@@ -1,0 +1,7 @@
+.message{
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    flex-grow: 1;
+    align-self: center;
+}
