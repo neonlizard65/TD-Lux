@@ -49,25 +49,29 @@
     </div> 
 </div>
 
-<!--Сделать цикл для товаров-->
-<div class="catalog">
-    <div class="card">
-        <img src="" alt="">
-        <div class="product-name">
-
-        </div>
-        <div class="product-price">
-
-        </div>
-        <div class="product-volume">
-
-        </div>
-        <button>Добавить</button>
-        
-    </div>
 
 </div>
-
+<!--Сделать цикл для товаров-->
+<div class="catalog">
+    {% for product in products %}
+    <div class="card">
+        <img src="{{product.photo.url}}" alt="">
+        <div class="product-name">
+            {{product.name}}
+        </div>
+        <div class="product-price">
+            Цена: {{product.price}} руб.
+        </div>
+        <div class="product-volume">
+            Объем: {{product.volume}} л
+        </div>
+        <div class="btn-holder">
+            <button value="{{product.id}}">Добавить</button>
+        </div>
+        
+    </div>
+    {% endfor %}
+   
 <script src="{% static 'script/carousel.js' %}"></script>
 {% endblock content %}
 

@@ -44,6 +44,10 @@ nav{
     justify-content: center;
 }
 
+.logo img{
+    max-height: 12vh;
+}
+
 .panel{
     display: flex;
     flex-direction: row;
@@ -81,6 +85,7 @@ nav{
     background-size: cover;
     height: 30px;
     width: 25px;
+    transition: 0.3s;
 }
 
 #cart:hover{

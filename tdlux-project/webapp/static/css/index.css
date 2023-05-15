@@ -66,7 +66,7 @@
     width: 100%;
     justify-content: center;
     position: relative;
-    bottom: 8%;
+    bottom: 10%;
 }
 
 .dots{
@@ -81,4 +81,43 @@
 
 .enable, .dots:hover {
     background-color: rgba(0,0,0,0.7);
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: solid 1px rgb(211, 211, 211);
+    padding: 10px;
+}
+
+.card img{
+    max-height: 300px;
+    align-self: center;
+    margin: 5px;
+    
+}
+
+.catalog{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+} 
+
+.btn-holder{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-grow: 1;
+}
+
+.product-price{
+    font-weight: bolder;
+}
+
+.product-name{
+    font-size: 1.5em;
+    flex-grow: 1;
 }

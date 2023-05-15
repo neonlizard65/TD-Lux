@@ -6,3 +6,30 @@
     align-items: center;
     justify-self: center;
 }
+
+.field{
+    display: flex;
+    justify-content: end;
+    margin: 10px auto;
+}
+
+input{
+    margin: 0px 10px;
+    font-size: 1.2em;
+    width: 18vw;
+}
+
+label{
+    display: flex;
+    align-items: center;
+}
+
+.remember{
+    text-align: center; 
+    margin: 6px 0px;
+}
+
+.fields{
+    position: relative;
+    right: 70px;
+}

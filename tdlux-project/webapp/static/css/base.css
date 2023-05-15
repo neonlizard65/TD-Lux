@@ -12,7 +12,7 @@ body{
     min-height: 78vh;
 }
 
-.button, input[type="submit"]{
+.button, input[type="submit"], button{
     width: 200px;
     height: 50px;
     font-size: 1em;
@@ -24,4 +24,8 @@ body{
     transition: 0.4s;
     border: none;
     border-radius: 2px;
+}
+
+.button:hover, input[type="submit"]:hover, button:hover{
+    background: #cfad63;
 }
